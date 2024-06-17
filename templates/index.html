@@ -35,7 +35,7 @@
         <div>
           <label for="amount">Amount:</label>
           <input
-            type="number"
+            type="text"
             id="amount"
             name="amount"
             placeholder="Enter the amount to be converted:"
@@ -45,7 +45,6 @@
         <button type="submit">Convert</button>
       </form>
       {% if errors %}
-      <div>
         <ul>
           {% for error in errors %}
           <li>{{ error }}</li>

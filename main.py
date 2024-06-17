@@ -13,7 +13,7 @@ def currency_calculator():
     if request.method == 'POST':
         from_currency = request.form['from_currency'].upper().strip()
         to_currency = request.form['to_currency'].upper().strip()
-        amount = request.form['amount']
+        amount = request.form['amount'].strip()
 
         amount, amount_errors = amount_validation(amount)
         errors.extend(amount_errors)
