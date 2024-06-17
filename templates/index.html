@@ -11,18 +11,36 @@
       <article>
         <h1>Currency Converter</h1>
       </article>
-      <form action="{{ url_for('index') }}" method="post">
+      <form method="post">
         <div>
           <label for="from_currency">Convert from:</label>
-          <input type="text" id="from_currency" name="from_currency" required />
+          <input
+            type="text"
+            id="from_currency"
+            name="from_currency"
+            placeholder="Enter currency to be converted from:"
+            required
+          />
         </div>
         <div>
           <label for="to_currency">Convert to:</label>
-          <input type="text" id="to_currency" name="to_currency" required />
+          <input
+            type="text"
+            id="to_currency"
+            name="to_currency"
+            placeholder="Enter currency to be converted to:"
+            required
+          />
         </div>
         <div>
           <label for="amount">Amount:</label>
-          <input type="number" id="amount" name="amount" required />
+          <input
+            type="number"
+            id="amount"
+            name="amount"
+            placeholder="Enter the amount to be converted:"
+            required
+          />
         </div>
         <button type="submit">Convert</button>
       </form>

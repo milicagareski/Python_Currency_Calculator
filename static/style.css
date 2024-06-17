@@ -69,6 +69,10 @@ input {
   text-align: center;
 }
 
+input::placeholder {
+  font-size: 1rem;
+}
+
 button {
   font-size: 1rem;
   cursor: pointer;

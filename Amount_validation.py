@@ -1,16 +1,10 @@
-def amount_validation():
-
-    while True:
-        try:
-            Amount = float(input("Enter the amount to be converted: "))
-            
-        except:
-            print("the entered input is invalid")
-            continue
-        if Amount<0:
-            print("Amount needs to greater than 0")
-        else:
-            break
-     
+def amount_validation(amount):
+    errors = []
+    try:
+        amount = float(amount)
+        if amount <= 0:
+            errors.append("Amount needs to be greater than 0.")
+    except ValueError:
+        errors.append("Invalid amount.")
     
-amount_validation()
+    return amount, errors
