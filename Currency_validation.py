@@ -15,13 +15,13 @@ def currency_validation(from_currency, to_currency):
 
     response = requests.get(url,params=params, headers=headers)
 
-    result = response.json().get('symbols', {})
+    # result = response.json().get('symbols', {})
 
-    # result_j = response.json()
-    # if 'symbols' in result_j:
-    #     result = result_j['symbols']
-    # else:
-    #     result = {}
+    result_j = response.json()
+    if 'symbols' in result_j:
+        result = result_j['symbols']
+    else:
+        result = {}
     
     # print(result)
 
